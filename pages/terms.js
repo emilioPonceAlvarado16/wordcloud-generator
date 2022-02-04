@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
-import About from '../components/about/About'
 import Footer from '../components/footer/Footer'
 export default function Terms() {
 
@@ -14,7 +13,6 @@ export default function Terms() {
       </Head>
       <Navbar route="/terms" ></Navbar>
   
-     <About/>
      <Footer/>
     </>
   )
