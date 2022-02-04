@@ -6,11 +6,10 @@ import Textdata from '../textdata/Textdata';
 // import Data from "../../data/Data"
 export default function App() {
   const wordcloudRef = createRef();
-  const data = ["the", "a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
+  const data = ["the", "de","la","que","el","se","y","un","quien","tiene","cual","al","qué","en","a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how",
     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"];
-  //  function feq(value){ getFrequencies(value)};
 
   const initialVal = `What is Lorem Ipsum?
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -136,15 +135,21 @@ export default function App() {
 
           className="bg-dark col-5 col-sm-5 col-md-5 col-lg-5  " >
           <div style={{ width: "28%", height: "30%" }} className=" container d-flex justify-content-center">
+            
             {wordcloud.started &&
               <span ref={wordcloudRef}>
                 <ReactWordcloud
                   words={wordcloud.words}
 
                   options={wordcloud.options} /></span>}
+              
+             
 
-
+      
           </div>
+
+          
+
 
 
 
