@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import ReactWordcloud from 'react-wordcloud';
 // import getFrequencies from "../../functions/getFrequencies"
-import Data from "../../data/Data"
+// import Data from "../../data/Data"
 export default function App() {
   const data=["the", "a", "to", "if", "is", "in","it", "of", "and", "or", "an", "as", "i", "me", "my","we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
   "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
@@ -52,12 +52,7 @@ export default function App() {
   };
   const [worcloud, setworcloud] = useState(wl);
 
-  useEffect(() => {
-    
-    return () => {
-      setworcloud({started:true,...worcloud})
-    };
-  }, []);
+
   
 
 
