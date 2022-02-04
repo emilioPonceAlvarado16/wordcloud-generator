@@ -90,6 +90,9 @@ export default function App() {
   const processData = () => {
 
     // var wd="";
+    if(!textdata){
+      return ;
+    }
 
     const wd = getFrequencies(textdata);
     //  setTimeout(console.log())
@@ -98,6 +101,7 @@ export default function App() {
     setworcloud({ ...wordcloud, started: true, words: wd });
 
   };
+
   const handleSave = () => {
     const svgElement = wordcloudRef.current.querySelector('svg');
     saveSvgAsPng(svgElement, 'wordcloud.png');
