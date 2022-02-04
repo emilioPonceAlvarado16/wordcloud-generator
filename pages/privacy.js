@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Head from 'next/head';
+import Footer from '../components/footer/Footer';
 export default function privacy() {
   return (
     <>
@@ -23,6 +24,7 @@ La titularidad de este sitio web, https://freewordcloud.netlify.app/, (en adelan
 
 
     </p>
+    <Footer/>
     </>
 
   )

@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar/Navbar'
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
+import Contactform from '../components/contactform/Contactform'
 export default function contact() {
 
   return (
@@ -16,6 +16,8 @@ export default function contact() {
       <Navbar route="/contact" ></Navbar>
 
       <Header/>
+      
+      <Contactform/>
       <Footer/>
     </>
   )

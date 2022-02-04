@@ -131,7 +131,7 @@ export default function App() {
 
         <div name="text1" type="text"
 
-          style={{ border: '1px solid #333', width: '100%', height: 'calc( 40em + 23.5vh )', border: '1px solid #333', overflow: 'auto' }}
+          style={{ border: '1px solid #333', width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto' }}
 
           className="bg-dark col-5 col-sm-5 col-md-5 col-lg-5  " >
           <div style={{ width: "28%", height: "30%" }} className=" container d-flex justify-content-center">
