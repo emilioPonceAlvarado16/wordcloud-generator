@@ -21,6 +21,10 @@ export default function App() {
   
   
   const [state, setState] = useState(initialVal);
+  
+  const [worcloud, setworcloud] = useState({});
+
+useEffect(() => {
   const wl = {
     size: [400, 300],
     options: {
@@ -50,8 +54,11 @@ export default function App() {
       },
     ]
   };
-  const [worcloud, setworcloud] = useState(wl);
 
+  return () => {
+   setworcloud({started:true, ...wl})
+  };
+}, [state]);
 
   
 
@@ -62,7 +69,7 @@ export default function App() {
     setState(new_value);
     // const wd = () => getFrequencies(new_value);
     // console.log(wd);
-    // setworcloud({ ...worcloud });
+    setworcloud({ started:true,...worcloud });
 
   }
 const getFrequencies = (text = '') => {
@@ -128,7 +135,7 @@ const getFrequencies = (text = '') => {
 
         <div id="text1" name="text1" type="text"
 
-          style={{ border: '1px solid #333', width: '100%', height: 'calc( 40em + 15vh )',  border: '1px solid #333'}}
+          style={{ border: '1px solid #333', width: '100%', height: 'calc( 40em + 15vh )',  border: '1px solid #333', overflow: 'auto'}}
 
           className="bg-white col-5 col-sm-5 col-md-5 col-lg-5  " >
 
