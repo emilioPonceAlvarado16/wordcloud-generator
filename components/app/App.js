@@ -56,9 +56,9 @@ useEffect(() => {
   };
 
   return () => {
-   setworcloud({started:true, ...wl})
+   setworcloud({started:true, ...worcloud})
   };
-}, [state]);
+}, []);
 
   
 
@@ -68,12 +68,13 @@ useEffect(() => {
     const new_value = e.target.value;
     setState(new_value);
     // const wd = () => getFrequencies(new_value);
-    // console.log(wd);
-    setworcloud({ started:true,...worcloud });
+    console.log();
+    // setworcloud({ started:true,...worcloud });
 
   }
 const getFrequencies = (text = '') => {
     var list = text.split(" ");
+    if(text.trim(" ")=="")return;
     var result = [];
     var word_list = [];
     var index=-1;
