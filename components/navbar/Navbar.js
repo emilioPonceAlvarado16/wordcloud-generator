@@ -8,7 +8,9 @@ export default function Navbar(props) {
 
     { name: "Generator", url: "/" },
     { name: "Contact", url: "/contact" },
-    { name: "About", url: "/about" }
+    { name: "About", url: "/about" },
+    { name: "Privacy", url: "/privacy" },
+    { name: "Terms", url: "/terms" },
 
   ]
   return (

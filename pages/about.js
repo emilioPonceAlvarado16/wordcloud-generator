@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar/Navbar'
-import Header from '../components/header/Header'
 import About from '../components/about/About'
+import Footer from '../components/footer/Footer'
 export default function Home() {
 
   return (
@@ -17,6 +15,7 @@ export default function Home() {
       <Navbar route="/about" ></Navbar>
   
      <About/>
+     <Footer/>
     </>
   )
 }
