@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
 import Header from '../components/header/Header'
 import App from '../components/app/App'
-
+import Footer from '../components/footer/Footer'
 export default function Home() {
 
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       </Head>
       <Navbar route="/" ></Navbar>
    <App/>
+   <Footer/>
     </>
   )
 }

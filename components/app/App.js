@@ -2,7 +2,6 @@ import { React, useState, useEffect, createRef } from 'react';
 import ReactWordcloud from 'react-wordcloud';
 import { saveSvgAsPng } from 'save-svg-as-png';
 import Textdata from '../textdata/Textdata';
-
 // import getFrequencies from "../../functions/getFrequencies"
 // import Data from "../../data/Data"
 export default function App() {
@@ -26,7 +25,7 @@ export default function App() {
 
   const [textdata, setTextdata] = useState(initialVal);
 
-  const [worcloud, setworcloud] = useState({});
+  const [wordcloud, setworcloud] = useState({});
 
   useEffect(() => {
     const wl = {
@@ -40,27 +39,12 @@ export default function App() {
 
       started: false,
       words: [
-        {
-          text: 'told',
-          value: 7,
-        },
-        {
-          text: 'mistake',
-          value: 1,
-        },
-        {
-          text: 'thought',
-          value: 2,
-        },
-        {
-          text: 'bad',
-          value: 4,
-        },
+        
       ]
     };
 
     return () => {
-      setworcloud({ started: true, ...worcloud })
+      setworcloud({ started: true, ...wordcloud })
     };
   }, []);
 
@@ -82,8 +66,8 @@ export default function App() {
     var result = [];
     var word_list = [];
     var index = -1;
-    var word = ""
     for (var i = 0; i < list.length; i++) {
+      var word = ""
       word = list[i].toLocaleLowerCase();
       if (!data.includes(word)) {
         if (!word_list.includes(list[i])) {
@@ -111,7 +95,7 @@ export default function App() {
     //  setTimeout(console.log())
 
     console.log(wd);
-    setworcloud({ ...worcloud, started: true, words: wd });
+    setworcloud({ ...wordcloud, started: true, words: wd });
 
   };
   const handleSave = () => {
@@ -121,20 +105,23 @@ export default function App() {
 
   return (
     <>
-      <header id="page-header">
+      <header id="page-header" >
         <div className="jumbotron jumbotron-fluid bg-light">
           <div className="container text-center">
             <h2>Free Wordcloud Generator</h2>
-            <p className="lead">Convert text into a wordcloud image in just a few clicks.</p>
+            <p className="lead" >Convert text into a wordcloud image in just a few clicks.</p>
+            {wordcloud.words ? 
+           ( <button className="btn social-icons btn-info" style={{marginRight:"1%"}}onClick={handleSave} ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
 
-            <button className="btn social-icons " ><i className="fa fa-upload" aria-hidden="true"> Upload File .txt</i></button>
-            <button className="btn social-icons" onClick={handleSave} ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>
-            <button className="btn btn-success" onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</button>
+              
+           :(            <button className="btn social-icons btn-info"style={{marginRight:"1%"}} onClick={handleSave} disabled ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
+           }
+            <button className="btn btn-success"style={{marginRight:"1%"}} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</button>
 
           </div>
         </div>
       </header>
-      <div className="row  justify-content-center  mt-5  " >
+      <div className="row  justify-content-center  mt-5  " style={{marginBottom:"5%"}} >
 
         <Textdata textdata={textdata} update={update}></Textdata>
 
@@ -145,12 +132,12 @@ export default function App() {
 
           className="bg-dark col-5 col-sm-5 col-md-5 col-lg-5  " >
           <div style={{ width: "28%", height: "30%" }} className=" container d-flex justify-content-center">
-            {worcloud.started &&
+            {wordcloud.started &&
               <span ref={wordcloudRef}>
                 <ReactWordcloud
-                  words={worcloud.words}
+                  words={wordcloud.words}
 
-                  options={worcloud.options} /></span>}
+                  options={wordcloud.options} /></span>}
 
 
           </div>
@@ -161,6 +148,7 @@ export default function App() {
 
         </div>
       </div>
+      
 
     </>
   )
