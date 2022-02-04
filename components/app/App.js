@@ -46,7 +46,7 @@ export default function App() {
     return () => {
       setworcloud({ started: true, ...wordcloud })
     };
-  }, []);
+  }, );
 
 
 
