@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Header from '../header/Header';
 
@@ -25,7 +26,7 @@ export default function Contactform() {
                 
                 <div className='bg-light col-12 col-md-10 col-lg-6' style={{border: '0.5px solid #333', borderRadius:"4px", marginTop:"4%", marginBottom:"5%"}}>
                
-                <form style={{marginBottom:"5%",marginTop:"4%"}}>
+                <form style={{margin:"4%"}}>
                     <div className='container container d-flex justify-content-center' >
                         <span style={titleStyle}>Contact Form</span>
                     </div>
@@ -50,7 +51,7 @@ export default function Contactform() {
                     </div>
                     <div className="form-check" style={{marginBottom:"2%"}}>
                         <input type="checkbox" autoComplete="off" required  className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label"  >Accept the conditions from </label>
+                        <label className="form-check-label"  >Accept the conditions from <Link href="/privacy" ><a>Privacy</a></Link>  and  <Link href="/terms" ><a>Terms</a></Link> </label>
                     </div>
                     <button type="submit" className="btn btn-info">Submit</button>
                 </form>
