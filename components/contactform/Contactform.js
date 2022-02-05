@@ -31,7 +31,7 @@ export default function Contactform() {
                     </div>
                     <div className="form-group">
                         <label >Name*</label>
-                        <input type="text" required className="form-control" id="exampleInputEmail1" placeholder="Enter name">
+                        <input type="text" autoComplete="off" required className="form-control" id="exampleInputEmail1" placeholder="Enter name">
                         </input>
                     </div>
                     <div className="form-group">
@@ -41,16 +41,16 @@ export default function Contactform() {
                         <small id="emailHelp" className="form-text text-muted">We&apos;ll never share your email with anyone else.</small>
                     </div>
                     <div className="form-group">
-                        <label >Topic</label>
-                        <input  className="form-control" id="exampleInputPassword1" required placeholder="Write Topic..." />
+                        <label >Topic*</label>
+                        <input autoComplete="off" className="form-control" id="exampleInputPassword1" required placeholder="Write Topic..." />
                     </div>
                     <div className="form-group">
-                        <label >Message</label>
+                        <label >Message*</label>
                         <textarea  className="form-control" required id="exampleInputPassword1" placeholder="Write here..." />
                     </div>
                     <div className="form-check" style={{marginBottom:"2%"}}>
-                        <input type="checkbox" required  className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" >Accept the conditions from </label>
+                        <input type="checkbox" autoComplete="off" required  className="form-check-input" id="exampleCheck1" />
+                        <label className="form-check-label"  >Accept the conditions from </label>
                     </div>
                     <button type="submit" className="btn btn-info">Submit</button>
                 </form>

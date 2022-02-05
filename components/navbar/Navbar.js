@@ -9,7 +9,8 @@ export default function Navbar(props) {
     { name: "Generator", url: "/" },
     { name: "Contact", url: "/contact" },
     { name: "Privacy", url: "/privacy" },
-    { name: "Terms", url: "/terms" },
+    { name: "Terms", url: "/terms" }
+
 
   ]
   return (
