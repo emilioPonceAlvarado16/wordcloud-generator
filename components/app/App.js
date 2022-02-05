@@ -108,7 +108,7 @@ export default function App() {
 
   return (
     <>
-      <header id="page-header" >
+      <header id="col-12 page-header" >
         <div className="jumbotron jumbotron-fluid bg-light">
           <div className="container text-center">
             <h2>Free Wordcloud Generator</h2>
@@ -124,16 +124,16 @@ export default function App() {
           </div>
         </div>
       </header>
-      <div className="row  justify-content-center  mt-5  " style={{marginBottom:"5%"}} >
+      <div className="row col-12 justify-content-center  mt-5  " style={{ width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto',marginBottom:"5%", paddingLeft:"8%"}} >
 
         <Textdata textdata={textdata} update={update}></Textdata>
 
 
         <div name="text1" type="text"
 
-          style={{ border: '1px solid #333', width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto' }}
+         
 
-          className="bg-dark col-5 col-sm-5 col-md-5 col-lg-5  " >
+          className="bg-dark col-6 col-sm-6 col-md-6 col-lg-6  " style={{overflow:"auto"}} >
           <div style={{ width: "28%", height: "30%" }} className=" container d-flex justify-content-center">
             
             {wordcloud.started &&

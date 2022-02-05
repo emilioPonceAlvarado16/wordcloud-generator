@@ -13,7 +13,9 @@ export default function Terms() {
       </Head>
       <Navbar route="/terms" ></Navbar>
   
-     <Footer/>
+  <Footer/>
+
+     
     </>
   )
 }

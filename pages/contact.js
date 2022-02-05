@@ -4,7 +4,6 @@ import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Contactform from '../components/contactform/Contactform'
 export default function contact() {
-
   return (
     <>
       <Head>
@@ -15,7 +14,6 @@ export default function contact() {
       </Head>
       <Navbar route="/contact" ></Navbar>
 
-      <Header/>
       
       <Contactform/>
       <Footer/>
