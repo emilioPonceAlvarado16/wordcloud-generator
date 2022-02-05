@@ -44,7 +44,7 @@ export default function Terms() {
       <h2  style={bl}>III. ACCESS AND NAVIGATION ON THE WEBSITE: EXCLUSION OF WARRANTIES AND LIABILITY</h2>
       <p>Free WordCloud online does not guarantee the continuity, availability and usefulness of the Website, nor of the Contents or Services.Free WordCloud online will do everything possible for the proper functioning of the Website, however, it is not responsible or guarantees that access to this Website will not be uninterrupted or error free.
 
-        Nor is it responsible or guarantees that the content or software that can be accessed through this Website is error-free or causes damage to the User's computer system (software and hardware). In no caseFree WordCloud online will be responsible for losses, damages or harm of any kind arising from access, browsing and use of the Website, including, but not limited to, those caused to computer systems or those caused by the introduction of viruses.
+        Nor is it responsible or guarantees that the content or software that can be accessed through this Website is error-free or causes damage to the User&apos; computer system (software and hardware). In no caseFree WordCloud online will be responsible for losses, damages or harm of any kind arising from access, browsing and use of the Website, including, but not limited to, those caused to computer systems or those caused by the introduction of viruses.
 
         Free WordCloud online Nor is it responsible for any damages that may be caused to users due to improper use of this Website. In particular, it is not responsible in any way for drops, interruptions, lack or defect of telecommunications that may occur.</p>
       <h2  style={bl}>V. INTELLECTUAL AND INDUSTRIAL PROPERTY</h2>
@@ -52,7 +52,7 @@ export default function Terms() {
 
 All rights reserved. By virtue of the provisions of the Intellectual Property Law, the reproduction, distribution and public communication, including the method of making them available, of all or part of the contents of this website, for commercial purposes, are expressly prohibited. in any support and by any technical means, without the authorization ofFree WordCloud online.
 
-The User undertakes to respect the intellectual and industrial property rights ofFree WordCloud online. You can view the elements of the Website or even print, copy and store them on your computer's hard drive or on any other physical medium as long as it is exclusively for your personal use. The User, however, may not delete, alter, or manipulate any protection device or security system that was installed on the Website.
+The User undertakes to respect the intellectual and industrial property rights ofFree WordCloud online. You can view the elements of the Website or even print, copy and store them on your computer&apos; hard drive or on any other physical medium as long as it is exclusively for your personal use. The User, however, may not delete, alter, or manipulate any protection device or security system that was installed on the Website.
 
 In the event that the User or third party considers that any of the Contents of the Website supposes a violation of the rights of protection of intellectual property, they must immediately notifyFree WordCloud onlinethrough the contact information in the GENERAL INFORMATION section of this Legal Notice and General Conditions of Use.</p>
     

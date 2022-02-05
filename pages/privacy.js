@@ -41,9 +41,9 @@ export default function privacy() {
         <p>In compliance with the provisions of the RGPD and the LOPD-GDD, we inform you that the personal data collected by Free WordCloud Online using the Contact page only https://freewordcloud.netlify.app/contact, by means of the extended forms in its pages they will be incorporated and will be treated in our file in order to be able to facilitate, expedite and fulfill the commitments established between Free WordCloud Onlineand the User or the maintenance of the relationship established in the forms that he fills out, or to attend to a request or query from the same. Likewise, in accordance with the provisions of the RGPD and the LOPD-GDD, unless the exception provided for in article 30.5 of the RGPD is applicable, a record of treatment activities is maintained that specifies, according to its purposes, the treatment activities carried out and the other circumstances established in the RGPD.</p>
 
         <h3 style={bl}>Principles applicable to the processing of personal data</h3>
-        <p>The processing of the User's personal data will be subject to the following principles contained in article 5 of the RGPD and in article 4 and following of Organic Law 3/2018, of December 5, on the Protection of Personal Data and guarantee of the digital rights:</p>
+        <p>The processing of the User&apos;s personal data will be subject to the following principles contained in article 5 of the RGPD and in article 4 and following of Organic Law 3/2018, of December 5, on the Protection of Personal Data and guarantee of the digital rights:</p>
         <ul>
-          <li>Principle of legality, loyalty and transparency: the User's consent will be required at all times prior to completely transparent information on the purposes for which the personal data is collected.</li>
+          <li>Principle of legality, loyalty and transparency: the User&apos;s consent will be required at all times prior to completely transparent information on the purposes for which the personal data is collected.</li>
           <li>Purpose limitation principle: personal data will be collected for specific, explicit and legitimate purposes.</li>
           <li>Principle of data minimization: the personal data collected will only be strictly necessary in relation to the purposes for which they are processed.</li>
           <li>Accuracy principle: personal data must be exact and always updated.</li>
@@ -64,7 +64,7 @@ export default function privacy() {
         <h3 style={bl}>Purposes of the treatment to which the personal data is destined</h3>
         <p>Personal data is collected and managed byFree WordCloud Onlinewith the purpose of being able to facilitate, expedite and fulfill the commitments established between the Website and the User or the maintenance of the relationship established in the forms that the latter fills out or to attend to a request or query.
 
-          Likewise, the data may be used for a personalization, operational and statistical commercial purpose, and activities of the company's corporate purpose.Free WordCloud Online, as well as for the extraction, storage of data and marketing studies to adapt the Content offered to the User, as well as to improve the quality, operation and navigation of the Website.
+          Likewise, the data may be used for a personalization, operational and statistical commercial purpose, and activities of the company&apos; corporate purpose.Free WordCloud Online, as well as for the extraction, storage of data and marketing studies to adapt the Content offered to the User, as well as to improve the quality, operation and navigation of the Website.
 
           At the time the personal data is obtained, the User will be informed about the specific purpose or purposes of the treatment to which the personal data will be used; that is, the use or uses that will be given to the information collected.</p>
 
