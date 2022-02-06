@@ -2,11 +2,12 @@ import { React, useState, useEffect, createRef } from 'react';
 import ReactWordcloud from 'react-wordcloud';
 import { saveSvgAsPng } from 'save-svg-as-png';
 import Textdata from '../textdata/Textdata';
+import { Button } from 'react-bootstrap';
 import MyVerticallyCenteredModal from '../modal/Modal';
 // import getFrequencies from "../../functions/getFrequencies"
 // import Data from "../../data/Data"
 export default function App() {
-  const [modalShow, setmodalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const wordcloudRef = createRef();
   const data = ["the", "de","la","que","el","se","y","un","quien","tiene","cual","al","qué","en","a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
@@ -122,9 +123,9 @@ export default function App() {
            :(            <button className="btn social-icons btn-info"style={{marginRight:"1%"}} onClick={handleSave} disabled ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
            }
             <button className="btn btn-success"style={{marginRight:"1%"}} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</button>
-            <button variant="primary" onClick={() => setModalShow(true)}>
+            <Button variant="primary" onClick={() => setModalShow(true)}>
         Launch vertically centered modal
-      </button>
+      </Button>
 
 
       <MyVerticallyCenteredModal

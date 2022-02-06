@@ -1,5 +1,9 @@
 import React from 'react';
+import { Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+
 export default function MyVerticallyCenteredModal(props) {
+  
   return (
     <Modal
     {...props}
@@ -7,11 +11,13 @@ export default function MyVerticallyCenteredModal(props) {
     aria-labelledby="contained-modal-title-vcenter"
     centered
   >
-    <Modal.Header closeButton>
+    <Modal.Header >
       <Modal.Title id="contained-modal-title-vcenter">
         Modal heading
       </Modal.Title>
-    </Modal.Header>
+      <button className="btn btn-success"style={{marginRight:"1%"}} onClick={props.onHide}><i className="fa fa-trash" aria-hidden="true"></i> Close</button>
+
+    </Modal.Header >
     <Modal.Body>
       <h4>Centered Modal</h4>
       <p>
@@ -21,7 +27,9 @@ export default function MyVerticallyCenteredModal(props) {
       </p>
     </Modal.Body>
     <Modal.Footer>
-      <Button onClick={props.onHide}>Close</Button>
+      {/* <Button onClick={props.onHide}>Close</Button> */}
+      <button className="btn btn-success"style={{marginRight:"1%"}} onClick={props.onHide}><i className="fa fa-trash" aria-hidden="true"></i> Close</button>
+
     </Modal.Footer>
   </Modal>
   );
