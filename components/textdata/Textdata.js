@@ -11,9 +11,9 @@ export default function Textdata(props) {
           placeholder="Copy text here and then Run"
           autoComplete="false"
           onChange={update}
+          defaultValue={textdata}
         >
-          {textdata}
-
+        
         </textarea>
 
   )

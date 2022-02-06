@@ -114,12 +114,12 @@ export default function App() {
             <h2>Free Wordcloud Generator</h2>
             <p className="lead" >Convert text into a wordcloud image in just a few clicks.</p>
             {wordcloud.words ? 
-           ( <button className="btn social-icons btn-info" style={{marginRight:"1%"}}onClick={handleSave} ><i className="fa fa-download" ariaHidden="true"> Download Image</i></button>)
+           ( <button className="btn social-icons btn-info" style={{marginRight:"1%"}}onClick={handleSave} ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
 
               
-           :(            <button className="btn social-icons btn-info"style={{marginRight:"1%"}} onClick={handleSave} disabled ><i className="fa fa-download" ariaHidden="true"> Download Image</i></button>)
+           :(            <button className="btn social-icons btn-info"style={{marginRight:"1%"}} onClick={handleSave} disabled ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
            }
-            <button className="btn btn-success"style={{marginRight:"1%"}} onClick={processData}><i className="fa fa-play" ariaHidden="true"></i> Run</button>
+            <button className="btn btn-success"style={{marginRight:"1%"}} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</button>
 
           </div>
         </div>
