@@ -28,7 +28,7 @@ export default function MyVerticallyCenteredModal(props) {
     </Modal.Body>
     <Modal.Footer>
       {/* <Button onClick={props.onHide}>Close</Button> */}
-      <button className="btn btn-success"style={{marginRight:"1%"}} onClick={props.onHide}><i className="fa fa-trash" aria-hidden="true"></i> Close</button>
+      <Button className="btn btn-success"style={{marginRight:"1%"}} onClick={props.onHide}><i className="fa fa-trash" aria-hidden="true"></i> Close</Button>
 
     </Modal.Footer>
   </Modal>
