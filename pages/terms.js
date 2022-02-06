@@ -22,7 +22,7 @@ export default function Terms() {
       <div className='container col-10 justify-content-center' style={{ paddingTop: "2%" , paddingBottom:"2%"}}>
       <br/>
       <h1 style={{fontWeight:"bold"}}>LEGAL NOTICE AND GENERAL CONDITIONS OF USE</h1>
-      <p style={{fontSize:"1.70rem"}} >https://freewordcloud.netlify.app</p>
+      <p style={{fontSize:"1.2rem"}} >https://freewordcloud.netlify.app</p>
       <br/>
       <p style={title}>I. GENERAL INFORMATION</p>
       <p style={{textAlign:"justify"}}>In compliance with the duty of information provided in Law 34/2002 on Services of the Information Society and Electronic Commerce (LSSI-CE) of July 11, the following general information data of this website are provided below :
