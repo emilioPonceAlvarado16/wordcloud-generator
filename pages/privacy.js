@@ -15,17 +15,17 @@ export default function privacy() {
   return (
     <>
       <Head>
-        <title>Word cloud generator - Free</title>
+        <title>Word cloud generator - Privacy</title>
         <meta name="description" content="About Format maker, release date, utilities, powerful tool for everyone." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar route="/privacy" ></Navbar>
-      <div className='container col-10 justify-content-center' style={{ paddingTop: "2%" }}>
+      <div className='container col-12  justify-content-center ' style={{ paddingTop: "2%", textAlign:"justify" }}>
         <br/>
         <h1 style={{fontWeight:"bold"}}>WEBSITE PRIVACY POLICY </h1>
 
-        <p style={{fontSize:"1.70rem"}} >https://freewordcloud.netlify.app/</p>
+        <p style={{ fontSize:"1.2rem",textAlign:"justify"}} >https://freewordcloud.netlify.app/</p>
         <br />
          <p style={title}>I. PRIVACY POLICY AND DATA PROTECTION</p>
          <p style={{textAlign:"justify"}}> 

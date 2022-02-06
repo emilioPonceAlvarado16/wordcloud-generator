@@ -4,11 +4,12 @@ import Header from '../header/Header';
 import { set, useForm } from 'react-hook-form';
 import { useState } from 'react';
 import axios from 'axios';
+import Thanks from '../thanks/Thanks';
 //https://sheetdb.io/api/v1/74826f4n6xvly
 export default function Contactform() {
     const { register, handleSubmit, reset } = useForm();
     const [loading, setLoading] = useState(false);
-
+    const [IsSent, setIsSent] = useState(false);
 
     const titleStyle = {
         display: "block",
@@ -29,6 +30,7 @@ export default function Contactform() {
         axios.post(URL, new_data).then((response) => {
             console.log(response);
             setLoading(false);
+            setIsSent(true);
         });
         e.target.reset();
         
@@ -42,7 +44,7 @@ export default function Contactform() {
 
 
 
-                    <div className='bg-light col-12 col-md-10 col-lg-6' style={{ border: '0.5px solid #333', borderRadius: "4px", marginTop: "4%", marginBottom: "5%" }}>
+                {!IsSent?(    <div className='bg-light col-12 col-md-10 col-lg-6' style={{ border: '0.5px solid #333', borderRadius: "4px", marginTop: "4%", marginBottom: "5%" }}>
 
                         <form style={{ margin: "4%" }} onSubmit={handleSubmit(processData)}>
                             <div className='container container d-flex justify-content-center' >
@@ -78,8 +80,12 @@ export default function Contactform() {
                                 </button>
                             )}
                         </form>
+                    
 
                     </div>
+
+                    )
+                        :<Thanks/>}
                 </div>
 
             </section>
