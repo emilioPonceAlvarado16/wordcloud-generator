@@ -22,6 +22,8 @@ import {
 
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
+  const quote="Look!, I found this amazing wordcloud generator for free!!, use it, you are gonna love it!.";
+  const hashtag="#FreeWordCloudOnline";
   const data = ["the", "de", "la", "que", "el", "se", "y", "un", "quien", "tiene", "cual", "al", "qué", "en", "a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how",
@@ -134,7 +136,7 @@ export default function App() {
             <Button className="btn btn-success" style={{ marginRight: "1%" }} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</Button>
             <br /> <br />
 
-            <FacebookShareButton url={share_url}>
+            <FacebookShareButton url={share_url} quote={quote} hashtag={hashtag}>
               <FacebookIcon size={32} round={true} >
 
 
@@ -142,25 +144,25 @@ export default function App() {
 
             </FacebookShareButton>
 
-            <FacebookMessengerShareButton url={share_url}>
+            <FacebookMessengerShareButton url={share_url} quote={quote} hashtag={hashtag}>
               <FacebookMessengerIcon size={30} round={true}>
 
               </FacebookMessengerIcon>
 
             </FacebookMessengerShareButton>
 
-            <TwitterShareButton url={share_url}>
+            <TwitterShareButton url={share_url} quote={quote} hashtag={hashtag}>
               <TwitterIcon size={32} round={true} />
 
 
             </TwitterShareButton>
 
-            <WhatsappShareButton url={share_url}>
+            <WhatsappShareButton url={share_url} quote={"chupalo"} hashtag={{hashtag}}>
               <WhatsappIcon size={32} round={true} />
 
             </WhatsappShareButton>
 
-            <TelegramShareButton url={share_url}>
+            <TelegramShareButton url={share_url} quote={quote} hashtag={hashtag}>
               <TelegramIcon size={32} round={true} />
             </TelegramShareButton>
 
