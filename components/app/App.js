@@ -3,8 +3,23 @@ import ReactWordcloud from 'react-wordcloud';
 import Textdata from '../textdata/Textdata';
 import { Button } from 'react-bootstrap';
 import MyVerticallyCenteredModal from '../modal/Modal';
-// import getFrequencies from "../../functions/getFrequencies"
-// import Data from "../../data/Data"
+import {
+  FacebookMessengerShareButton,
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton
+} from "react-share";
+
+import {
+  FacebookIcon,
+  FacebookMessengerIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+
+
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
   const data = ["the", "de", "la", "que", "el", "se", "y", "un", "quien", "tiene", "cual", "al", "qué", "en", "a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
@@ -102,10 +117,10 @@ export default function App() {
 
     console.log(wd);
     setworcloud({ ...wordcloud, started: true, words: wd });
-      show();
+    show();
 
   };
- 
+  const share_url = "https://freewordcloud.netlify.app/"
 
 
   return (
@@ -115,21 +130,56 @@ export default function App() {
           <div className="container text-center">
             <h2>Free Wordcloud Generator</h2>
             <p className="lead" >Convert text into a wordcloud image in just a few clicks.</p>
-            
+
             <Button className="btn btn-success" style={{ marginRight: "1%" }} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</Button>
-        
+            <br /> <br />
+
+            <FacebookShareButton url={share_url}>
+              <FacebookIcon size={32} round={true} >
+
+
+              </FacebookIcon>
+
+            </FacebookShareButton>
+
+            <FacebookMessengerShareButton url={share_url}>
+              <FacebookMessengerIcon size={30} round={true}>
+
+              </FacebookMessengerIcon>
+
+            </FacebookMessengerShareButton>
+
+            <TwitterShareButton url={share_url}>
+              <TwitterIcon size={32} round={true} />
+
+
+            </TwitterShareButton>
+
+            <WhatsappShareButton url={share_url}>
+              <WhatsappIcon size={32} round={true} />
+
+            </WhatsappShareButton>
+
+            <TelegramShareButton url={share_url}>
+              <TelegramIcon size={32} round={true} />
+            </TelegramShareButton>
+
+
+
 
             {wordcloud.started &&
-            
 
-                <MyVerticallyCenteredModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  children={wordcloud.started && <ReactWordcloud
-                    words={wordcloud.words}
-                    options={wordcloud.options} />}
 
-                />
+              <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+
+              >
+
+                {wordcloud.started && <ReactWordcloud
+                  words={wordcloud.words}
+                  options={wordcloud.options} />}
+              </MyVerticallyCenteredModal>
 
             }
           </div>
@@ -140,7 +190,7 @@ export default function App() {
         <Textdata textdata={textdata} update={update}></Textdata>
 
 
-     
+
 
 
 

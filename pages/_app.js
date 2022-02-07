@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import "../styles/Home.module.css"
+import "../styles/modal.css"
 import Head from 'next/head'
 import { useEffect } from 'react'
 import Script from 'next/script'
