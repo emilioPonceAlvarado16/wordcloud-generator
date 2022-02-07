@@ -154,11 +154,7 @@ export default function App() {
 
             </TwitterShareButton>
 
-            <WhatsappShareButton url={share_url} quote={"chupalo"} hashtag={{hashtag}}>
-              <WhatsappIcon size={32} round={true} />
-
-            </WhatsappShareButton>
-
+   
 
 
 
