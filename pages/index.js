@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Free Wordcloud Online</title>
-        <meta name="description" content="The best and Free Word Cloud generator for everyone, Easy to use, and very intuitive not like others." />
+        <meta name="description" content="The best and Free Word Cloud generator for everyone in 2022, Easy to use, and very intuitive not like others." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
