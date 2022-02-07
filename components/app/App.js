@@ -8,7 +8,7 @@ import {
   FacebookMessengerShareButton,
   FacebookShareButton,
   TwitterShareButton,
-  
+
 } from "react-share";
 
 import {
@@ -20,8 +20,8 @@ import {
 
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
-  const quote="Look!, I found this amazing wordcloud generator for free!!, use it, you are gonna love it!.";
-  const hashtag="#FreeWordCloudOnline";
+  const quote = "I found this amazing wordcloud generator for free!!, use it, you are gonna love it!.";
+  const hashtag = "#FreeWordCloudOnline";
   const data = ["the", "de", "la", "que", "el", "se", "y", "un", "quien", "tiene", "cual", "al", "qué", "en", "a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how",
@@ -70,9 +70,7 @@ export default function App() {
 
     const new_value = e.target.value;
     setTextdata(new_value);
-    // const wd = () => getFrequencies(new_value);
-    console.log();
-    // setworcloud({ started:true,...worcloud });
+    // console.log();
 
   }
   const getFrequencies = (text = '') => {
@@ -105,6 +103,9 @@ export default function App() {
   const show = () => {
     setModalShow(true);
   }
+  const deleteData = () => {
+    setTextdata("");
+  }
   const processData = () => {
 
     // var wd="";
@@ -130,6 +131,7 @@ export default function App() {
           <div className="container text-center">
             <h2>Free Wordcloud Generator</h2>
             <p className="lead" >Convert text into a wordcloud image in just a few clicks.</p>
+            <Button className="btn btn-danger" style={{ marginRight: "1%" }} onClick={deleteData}><i className="fa fa-trash" aria-hidden="true"></i> Clear</Button>
 
             <Button className="btn btn-success" style={{ marginRight: "1%" }} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</Button>
             <br /> <br />
@@ -155,7 +157,7 @@ export default function App() {
 
             </TwitterShareButton>
 
-   
+
 
 
 
@@ -180,8 +182,17 @@ export default function App() {
       </header>
       <div className="row col-12 justify-content-center  mt-5  " style={{ width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto', marginBottom: "5%", paddingLeft: "8%" }} >
 
-        <Textdata textdata={textdata} update={update}></Textdata>
+        <textarea id="text1" name="text1" type="text"
 
+
+          className="col-11 col-md-9 col-lg-9  "
+          placeholder="Copy text here and then Run"
+          autoComplete="false"
+          onChange={update}
+          value={textdata}
+        >
+
+        </textarea>
 
 
 
