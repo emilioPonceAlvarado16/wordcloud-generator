@@ -1,14 +1,7 @@
 import React from 'react';
 
 export default function Footer() {
-    const foot={
-
-        position:"absolute",
-        bottom:"0",
-        width:"100%",
-        height:"5px",   /* Height of the footer */
-        background:"#6cf"
-     }
+   
     return (
         <div className='d-flex flex-column' >
             <div className='wrapper flex-grow-1'>

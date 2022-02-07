@@ -14,7 +14,7 @@ export default function Terms() {
     <>
       <Head>
         <title>Free Wordcloud Online - Terms</title>
-        <meta name="description" content="About Format maker, release date, utilities, powerful tool for everyone." />
+        <meta name="description" content="Terms section of Free Wordcloud online , Legal notice and General conditions of Use for this Page." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>

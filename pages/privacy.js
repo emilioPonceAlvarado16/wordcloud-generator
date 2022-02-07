@@ -16,7 +16,7 @@ export default function privacy() {
     <>
       <Head>
         <title>Free Wordcloud Online - Privacy</title>
-        <meta name="description" content="About Format maker, release date, utilities, powerful tool for everyone." />
+        <meta name="description" content="Privacy content of Free WordCloud online, everything about the Privacy Policy and Data Protection" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
