@@ -1,6 +1,5 @@
-import { React, useState, useEffect, createRef } from 'react';
+import { React, useState, useEffect } from 'react';
 import ReactWordcloud from 'react-wordcloud';
-import { saveSvgAsPng } from 'save-svg-as-png';
 import Textdata from '../textdata/Textdata';
 import { Button } from 'react-bootstrap';
 import MyVerticallyCenteredModal from '../modal/Modal';
@@ -8,8 +7,7 @@ import MyVerticallyCenteredModal from '../modal/Modal';
 // import Data from "../../data/Data"
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
-  const wordcloudRef = createRef();
-  const data = ["the", "de","la","que","el","se","y","un","quien","tiene","cual","al","qué","en","a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
+  const data = ["the", "de", "la", "que", "el", "se", "y", "un", "quien", "tiene", "cual", "al", "qué", "en", "a", "to", "if", "is", "in", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them",
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being",
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how",
     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"];
@@ -31,7 +29,7 @@ export default function App() {
 
   useEffect(() => {
     const wl = {
-      size: [60, 70],
+      size: [900, 920],
       options: {
         rotations: 2,
         rotationAngles: [-90, 0],
@@ -41,14 +39,14 @@ export default function App() {
 
       started: false,
       words: [
-        
+
       ]
     };
 
     return () => {
       setworcloud({ started: true, ...wordcloud })
     };
-  },[] );
+  }, []);
 
 
 
@@ -89,11 +87,14 @@ export default function App() {
 
   }
 
+  const show = () => {
+    setModalShow(true);
+  }
   const processData = () => {
 
     // var wd="";
-    if(!textdata){
-      return ;
+    if (!textdata) {
+      return;
     }
 
     const wd = getFrequencies(textdata);
@@ -101,13 +102,11 @@ export default function App() {
 
     console.log(wd);
     setworcloud({ ...wordcloud, started: true, words: wd });
+      show();
 
   };
+ 
 
-  const handleSave = () => {
-    const svgElement = wordcloudRef.current.querySelector('svg');
-    saveSvgAsPng(svgElement, 'wordcloud.png');
-  };
 
   return (
     <>
@@ -116,59 +115,41 @@ export default function App() {
           <div className="container text-center">
             <h2>Free Wordcloud Generator</h2>
             <p className="lead" >Convert text into a wordcloud image in just a few clicks.</p>
-            {wordcloud.words ? 
-           ( <button className="btn social-icons btn-info" style={{marginRight:"1%"}}onClick={handleSave} ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
+            
+            <Button className="btn btn-success" style={{ marginRight: "1%" }} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</Button>
+        
 
-              
-           :(            <button className="btn social-icons btn-info"style={{marginRight:"1%"}} onClick={handleSave} disabled ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>)
-           }
-            <button className="btn btn-success"style={{marginRight:"1%"}} onClick={processData}><i className="fa fa-play" aria-hidden="true"></i> Run</button>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
+            {wordcloud.started &&
+            
 
+                <MyVerticallyCenteredModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                  children={wordcloud.started && <ReactWordcloud
+                    words={wordcloud.words}
+                    options={wordcloud.options} />}
 
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+                />
+
+            }
           </div>
         </div>
       </header>
-      <div className="row col-12 justify-content-center  mt-5  " style={{ width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto',marginBottom:"5%", paddingLeft:"8%"}} >
+      <div className="row col-12 justify-content-center  mt-5  " style={{ width: '100%', height: 'calc( 40em + 23.5vh )', overflow: 'auto', marginBottom: "5%", paddingLeft: "8%" }} >
 
         <Textdata textdata={textdata} update={update}></Textdata>
 
 
-        <div name="text1" type="text"
-
-         
-
-          className="bg-dark col-6 col-sm-6 col-md-6 col-lg-6  " style={{overflow:"auto"}} >
-          <div style={{ width: "28%", height: "30%" }} className=" container d-flex justify-content-center">
-            
-            {wordcloud.started &&
-              <span ref={wordcloudRef}>
-                <ReactWordcloud
-                  words={wordcloud.words}
-
-                  options={wordcloud.options} /></span>}
-              
-             
-
-      
-          </div>
-
-          
+     
 
 
 
 
 
 
-        </div>
+
       </div>
-      
+
 
     </>
   )

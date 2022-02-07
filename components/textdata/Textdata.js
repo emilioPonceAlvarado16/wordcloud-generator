@@ -7,7 +7,7 @@ export default function Textdata(props) {
     <textarea id="text1" name="text1" type="text"
 
           
-          className="col-6 col-sm-6 col-md-6 col-lg-6  "
+          className="col-11  "
           placeholder="Copy text here and then Run"
           autoComplete="false"
           onChange={update}
