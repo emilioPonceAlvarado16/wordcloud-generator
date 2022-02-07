@@ -12,6 +12,7 @@ export default function Home() {
         <title>Free Wordcloud Online</title>
         <meta name="description" content="The best and Free Word Cloud generator for everyone in 2022, Easy to use, and very intuitive not like others." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+        <meta name="google-site-verification" content="PTJZwvtOFdZd1Y4xtrz3o7zKrPD0Dv268R_tpFN2T3Y" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar route="/" ></Navbar>
