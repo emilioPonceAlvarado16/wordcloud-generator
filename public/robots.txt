@@ -1,0 +1,4 @@
+User-agent:*
+Allow:/
+
+Sitemap: https://freewordcloud.netlify.app/api/my-sitemap
