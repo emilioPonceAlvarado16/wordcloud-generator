@@ -6,17 +6,14 @@ import MyVerticallyCenteredModal from '../modal/Modal';
 import {
   FacebookMessengerShareButton,
   FacebookShareButton,
-  TelegramShareButton,
   TwitterShareButton,
-  WhatsappShareButton
+  
 } from "react-share";
 
 import {
   FacebookIcon,
   FacebookMessengerIcon,
-  TelegramIcon,
   TwitterIcon,
-  WhatsappIcon,
 } from "react-share";
 
 
@@ -162,9 +159,6 @@ export default function App() {
 
             </WhatsappShareButton>
 
-            <TelegramShareButton url={share_url} quote={quote} hashtag={hashtag}>
-              <TelegramIcon size={32} round={true} />
-            </TelegramShareButton>
 
 
 
