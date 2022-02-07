@@ -33,7 +33,7 @@ export default function App() {
       options: {
         rotations: 2,
         rotationAngles: [-90, 0],
-        fontSizes: [1000, 1000],
+        fontSizes: [10, 20],
         fontFamily: 'courier new',
       },
 

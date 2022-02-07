@@ -29,7 +29,7 @@ export default function MyVerticallyCenteredModal(props) {
     </Modal.Header >
     <Modal.Body>
       <h4>Centered Modal</h4>
-      <div style={{ width: "50%", height: "10%" , overflow:"auto"}} className="bg-dark container col-md-7 col-lg-10 d-flex justify-content-center">
+      <div style={{ width: "50%", height: "10%" , overflow:"auto"}} className="bg-dark container  d-flex justify-content-center">
       <span ref={wordcloudRef}>
       {props.children}
       </span>
@@ -41,7 +41,6 @@ export default function MyVerticallyCenteredModal(props) {
       </p>
     </Modal.Body>
     <Modal.Footer>
-      {/* <Button onClick={props.onHide}>Close</Button> */}
       <Button className="btn btn-success"style={{marginRight:"1%"}} onClick={props.onHide}><i className="fa fa-trash" aria-hidden="true"></i> Close</Button>
       <button className="btn social-icons btn-info" style={{ marginRight: "1%" }} onClick={handleSave} ><i className="fa fa-download" aria-hidden="true"> Download Image</i></button>
 
