@@ -3,6 +3,7 @@ import ReactWordcloud from 'react-wordcloud';
 import Textdata from '../textdata/Textdata';
 import { Button } from 'react-bootstrap';
 import MyVerticallyCenteredModal from '../modal/Modal';
+
 import {
   FacebookMessengerShareButton,
   FacebookShareButton,
