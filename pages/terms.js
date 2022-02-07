@@ -10,7 +10,7 @@ const Posi=dynamic(
   <p style={{fontWeight:"bold", fontSize:"1.1rem"}}> Just a Second: Loading</p>
     
     
-    ), ssr: false  }
+    ), ssr: false }
 )
 
 const Footer=dynamic(
