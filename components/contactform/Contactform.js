@@ -38,7 +38,7 @@ export default function Contactform() {
     return (
         <>
 
-            <section className='bg-dark col-12 justify-content-center' >
+            <section className='bg-dark col-12 justify-content-center' style={{height:"100vh", }} >
                 <Header />
                 <div className='container  d-flex justify-content-center' >
 
