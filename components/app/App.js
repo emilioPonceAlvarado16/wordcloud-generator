@@ -1,8 +1,7 @@
 import { React, useState, useEffect } from 'react';
-import ReactWordcloud from 'react-wordcloud';
 import { Button } from 'react-bootstrap';
 import MyVerticallyCenteredModal from '../modal/Modal';
-import Simon from '../../pages/posi';
+import Posi from '../../pages/posi';
 import {
   FacebookMessengerShareButton,
   FacebookShareButton,
@@ -670,7 +669,7 @@ export default function App() {
 
               >
 
-                {wordcloud.started && <Simon options={wordcloud.options} words={wordcloud.words}/>}
+                {wordcloud.started && <Posi wd={wordcloud.words}/>}
               </MyVerticallyCenteredModal>
 
             }
