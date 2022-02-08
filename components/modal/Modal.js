@@ -5,12 +5,12 @@ import { saveSvgAsPng } from 'save-svg-as-png';
 export default function MyVerticallyCenteredModal(props) {
   const darkColor = {
     svgColor: "black",
-    class: "bg-dark container col-11 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center"
+    class: "bg-dark container col-12 col-md-10 col-lg-12 col-xl-10 d-flex justify-content-center"
 
   }
   const whiteColor = {
     svgColor: "transparent",
-    class: "bg-white container col-11 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center"
+    class: "bg-white container col-12 col-md-10 col-lg-12 col-xl-10 d-flex justify-content-center"
 
   }
   const [color, setcolor] = useState(darkColor);
@@ -52,10 +52,9 @@ export default function MyVerticallyCenteredModal(props) {
       </Modal.Header >
       <Modal.Body>
 
-        <div className={color.class} style={{ border: '1px solid #333' }} >
-          <span ref={wordcloudRef}>
+          <div  className={color.class} style={{ height: "100%", width: "100%",  border: '1px solid #333', overflow:"auto"  }} ref={wordcloudRef}>
+       
             {props.children}
-          </span>
         </div>
 
 
