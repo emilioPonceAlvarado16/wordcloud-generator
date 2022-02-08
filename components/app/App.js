@@ -26,9 +26,7 @@ export default function App() {
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how",
     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"];
 
-  const initialVal = `Tired of unintuitive word cloud generators? They claim to be free but they are not. Well, I present to you the Free Wordcloud converter, fast, simple and free, just the way you like it.
-  Just paste the text here and click on Run, a window will be displayed and you can change the background of the image to download, it will contain the generated wordcloud
-  `
+  const initialVal = `Tired of unintuitive word cloud generators? They claim to be free but they are not. Well, I present to you the Free Wordcloud converter, fast, simple and free, just the way you like it. `
 
 
   const [textdata, setTextdata] = useState(initialVal);
