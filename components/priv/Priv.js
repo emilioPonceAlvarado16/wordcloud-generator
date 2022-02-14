@@ -11,7 +11,7 @@ export default function Priv() {
       }
   return (
       <>
-    <div className='container col-12  justify-content-center ' style={{ paddingTop: "2%", textAlign:"justify" }}>
+    <div className='container col-10  justify-content-center ' style={{ paddingTop: "2%", textAlign:"justify" }}>
     <br/>
     <h1 style={{fontWeight:"bold"}}>WEBSITE PRIVACY POLICY </h1>
 
